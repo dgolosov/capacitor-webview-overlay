@@ -1,6 +1,6 @@
 {
-    "name": "@teamhive/capacitor-webview-overlay",
-    "version": "2.0.2",
+    "name": "capacitor-webview-overlay",
+    "version": "2.0.3",
     "description": "Webview Overlay",
     "main": "dist/plugin.cjs.js",
     "module": "dist/esm/index.js",
@@ -11,16 +11,16 @@
         "android/build.gradle",
         "dist/",
         "ios/Plugin/",
-        "TeamhiveCapacitorWebviewOverlay.podspec"
+        "CapacitorWebviewOverlay.podspec"
     ],
     "author": "",
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/TeamHive/capacitor-webview-overlay.git"
+        "url": "git+https://github.com/dgolosov/capacitor-webview-overlay.git"
     },
     "bugs": {
-        "url": "https://github.com/TeamHive/capacitor-webview-overlay/issues"
+        "url": "https://github.com/dgolosov/capacitor-webview-overlay/issues"
     },
     "keywords": [
         "capacitor",
