@@ -1,7 +1,7 @@
 {
     "name": "capacitor-webview-overlay",
-    "version": "2.0.3",
-    "description": "Webview Overlay",
+    "version": "2.0.5",
+    "description": "Capacitor Webview Overlay",
     "main": "dist/plugin.cjs.js",
     "module": "dist/esm/index.js",
     "types": "dist/esm/index.d.ts",
@@ -10,7 +10,7 @@
         "android/src/main/",
         "android/build.gradle",
         "dist/",
-        "ios/Plugin/",
+        "ios/",
         "CapacitorWebviewOverlay.podspec"
     ],
     "author": "",

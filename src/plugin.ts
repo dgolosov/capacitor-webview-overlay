@@ -1,7 +1,10 @@
-import { PluginListenerHandle, registerPlugin } from '@capacitor/core';
-import { IWebviewOverlayPlugin, ScriptInjectionTime } from './definitions';
-
+import type { PluginListenerHandle } from '@capacitor/core';
+import { registerPlugin } from '@capacitor/core';
 import ResizeObserver from 'resize-observer-polyfill';
+
+import type { IWebviewOverlayPlugin } from './definitions';
+import { ScriptInjectionTime } from './definitions';
+
 
 const WebviewOverlayPlugin = registerPlugin<IWebviewOverlayPlugin>('WebviewOverlayPlugin');
 
@@ -35,7 +38,7 @@ class WebviewOverlayClass {
     open(options: WebviewOverlayOpenOptions): Promise<void> {
         this.element = options.element;
 
-        if (this.element && this.element.style) {
+        if (this.element?.style) {
             this.element.style.backgroundSize = 'cover';
             this.element.style.backgroundRepeat = 'no-repeat';
             this.element.style.backgroundPosition = 'center';
@@ -100,7 +103,7 @@ class WebviewOverlayClass {
                     const blobUrl = URL.createObjectURL(blob);
                     const img = new Image();
                     img.onload = async () => {
-                        if (this.element && this.element.style) {
+                        if (this.element?.style) {
                             this.element.style.backgroundImage = `url(${blobUrl})`;
                         }
                         setTimeout(async () => {
@@ -111,7 +114,7 @@ class WebviewOverlayClass {
                     img.src = blobUrl;
                 }
                 else {
-                    if (this.element && this.element.style) {
+                    if (this.element?.style) {
                         this.element.style.backgroundImage = `none`;
                     }
                     await WebviewOverlayPlugin.hide();
@@ -119,7 +122,7 @@ class WebviewOverlayClass {
                 }
             }
             else {
-                if (this.element && this.element.style) {
+                if (this.element?.style) {
                     this.element.style.backgroundImage = `none`;
                 }
                 await WebviewOverlayPlugin.show();
